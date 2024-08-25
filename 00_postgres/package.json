@@ -1,0 +1,23 @@
+{
+  "name": "00_postgres",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.mjs",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.mts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^5.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "prisma": "^5.18.0",
+    "tsx": "^4.18.0",
+    "typescript": "^5.5.4"
+  }
+}

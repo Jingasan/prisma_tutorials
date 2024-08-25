@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:16.4
+    ports: # ポート番号のマッピング
+      - 5432:5432
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    restart: always # 再起動条件：常に
+    tty: true
