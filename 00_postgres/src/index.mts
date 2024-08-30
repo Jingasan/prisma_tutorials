@@ -23,6 +23,11 @@ async function main() {
   // すべてのユーザーカラムを取得
   const allUsers = await prisma.user.findMany();
   console.log(allUsers);
+  // 特定のユーザーカラムを取得
+  const user = await prisma.user.findUnique({
+    where: { email: "user@email.com" },
+  });
+  console.log(user);
   // ユーザーカラムを削除
   await prisma.user.delete({
     where: { email: "user@gmail.com" }, // ユニークキーで検索
